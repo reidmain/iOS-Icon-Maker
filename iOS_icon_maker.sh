@@ -8,23 +8,15 @@ then
 	exit 1
 fi
 
-# Ensure that the argument has no whitespace.
-case $1 in
-	*\ * )
-		echo "Argument may not contain any whitespace."
-		exit 1
-		;;
-esac
+# Assign the argument to the path variable so it is easier to follow throughout the script.
+path=$1
 
-# Ensure that the argument is a valid file.
-if [ ! -f $1 ]
+# Ensure that the path points to a valid file.
+if [ ! -f "$path" ]
 then
-	echo "Argument must be a valid file."
+	echo "Path must point to a valid file."
 	exit 1
 fi
-
-# Assign the argument to the filename variable so it is easier to follow throughout the script.
-filename=$1
 
 # This function takes in the dimension of the icon (it assumes the icon is a square) and the name of the file to save the icon to.
 function createIconImage()
@@ -32,7 +24,7 @@ function createIconImage()
 	iconDimension=$1
 	iconName=$2
 
-	convert $filename -resize ${iconDimension}x${iconDimension}^ -gravity center -extent ${iconDimension}x${iconDimension} $iconName
+	convert "$path" -resize ${iconDimension}x${iconDimension}^ -gravity center -extent ${iconDimension}x${iconDimension} $iconName
 }
 
 # Create all the suggested icons for both the iPhone and iPad platforms to ensure the best appearance.
