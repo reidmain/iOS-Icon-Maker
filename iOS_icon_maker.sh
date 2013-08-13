@@ -28,13 +28,12 @@ function createIconImage()
 }
 
 # Create all the suggested icons for both the iPhone and iPad platforms to ensure the best appearance.
-createIconImage 57 icon_iphone.png
-createIconImage 114 icon_iphone@2x.png
-createIconImage 29 icon_iphone_spotlight.png
-createIconImage 58 icon_iphone_spotlight@2x.png
-createIconImage 72 icon_ipad.png
-createIconImage 144 icon_ipad@2x.png
-createIconImage 50 icon_ipad_spotlight.png
-createIconImage 100 icon_ipad_spotlight@2x.png
+createIconImage 29 icon_settings.png
+createIconImage 58 icon_settings@2x.png
+createIconImage 40 icon_spotlight.png
+createIconImage 80 icon_spotlight@2x.png
+createIconImage 120 icon_iphone@2x.png
+createIconImage 76 icon_ipad.png
+createIconImage 152 icon_ipad@2x.png
 createIconImage 512 iTunesArtwork
 createIconImage 1024 iTunesArtwork@2x
